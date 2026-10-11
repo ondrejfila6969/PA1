@@ -1,7 +1,5 @@
 #!/bin/bash
 
-#!/bin/bash
-
 for LANG in CZE ENG; do
     for X in {0000..0011}; do
         if [ ! -e "./${LANG}/${X}_in.txt" ]; then
