@@ -53,3 +53,8 @@ dkms.conf
 
 # debug information files
 *.dwo
+
+# Progtest - unittesting
+CZE/
+ENG/
+out.txt
