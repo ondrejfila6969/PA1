@@ -26,7 +26,8 @@ int validateInput(int result) {
     return EXIT_SUCCESS;
 }
 
-void printStats(int min, int max, int sum, double avg) {
+void printStats(int count, int min, int max, int sum, double avg) {
+    printf("COUNT: %d\n", count);
     printf("MIN: %d\n", min);
     printf("SUM: %d\n", sum);
     printf("MAX: %d\n", max);
@@ -35,6 +36,7 @@ void printStats(int min, int max, int sum, double avg) {
 
 int main() {
     int n;
+    int count = 0;
     int sum = 0;
     int max = INT_MIN;
     int min = INT_MAX;
@@ -57,6 +59,7 @@ int main() {
             printf("%s\n", "Nespravny vstup.");
             return EXIT_FAILURE;
         }
+        count++;
         sum += n2;
 
         (max < n2) ? max = n2 : max;
@@ -64,7 +67,7 @@ int main() {
     }
 
     avg = ((double)sum / (double)n);
-    printStats(min, max, sum, avg);
+    printStats(count, min, max, sum, avg);
 
     return EXIT_SUCCESS;
 }
