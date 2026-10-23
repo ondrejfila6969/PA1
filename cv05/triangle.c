@@ -42,9 +42,16 @@ int main() {
 
     printf("Trojúhelník: (a: %d, b: %d, c: %d)\n", t.a, t.b, t.c);
     printf("%s\n", "-------------------------------");
-    isTriangleRightAngled(t) ? printf("%s\n", "Trojúhelník JE pravoúhlý") : printf("%s\n", "Trojúhelník NENÍ pravoúhlý");
-    isTriangleIsosceled(t) ? printf("%s\n", "Trojúhelník JE rovnoramenný") : printf("%s\n", "Trojúhelník NENÍ rovnoramenný");
-    isTriangleEquilateral(t) ? printf("%s\n", "Trojúhelník JE rovnostranný") : printf("%s\n", "Trojúhelník NENÍ rovnostranný");
+
+    /*
+        isTriangleRightAngled(t) ? printf("%s\n", "Trojúhelník JE pravoúhlý") : printf("%s\n", "Trojúhelník NENÍ pravoúhlý");
+        isTriangleIsosceled(t) ? printf("%s\n", "Trojúhelník JE rovnoramenný") : printf("%s\n", "Trojúhelník NENÍ rovnoramenný");
+        isTriangleEquilateral(t) ? printf("%s\n", "Trojúhelník JE rovnostranný") : printf("%s\n", "Trojúhelník NENÍ rovnostranný");
+    */
+   
+    printf("Trojúhelník %s pravoúhlý\n", isTriangleRightAngled(t) ? "JE" : "NENÍ");
+    printf("Trojúhelník %s rovnoramenný\n", isTriangleIsosceled(t) ? "JE" : "NENÍ");
+    printf("Trojúhelník %s rovnostranný\n", isTriangleEquilateral(t) ? "JE" : "NENÍ");
     printf("%s\n", "-------------------------------");
 
     return EXIT_SUCCESS;
