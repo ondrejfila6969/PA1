@@ -4,7 +4,7 @@
 #include <ctype.h>
 
 
-typedef struct ARRAY {
+typedef struct {
     int * data;
     int size;
     int capacity;
